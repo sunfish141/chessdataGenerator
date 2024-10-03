@@ -3,7 +3,7 @@ import numpy as np
 import pandas as pd
 import csv
 
-data = pd.read_csv('chessmodel/chessData.csv')
+data = pd.read_csv('chessData.csv')#change with CSV path
 
 board = []
 for idx, row in data.iterrows():
@@ -83,7 +83,7 @@ for idx, row in data.iterrows():
     eval = 10000
   eval = int(eval)
   board = [wp, wr, wn, wb, wk, wq, bp, br, bn, bb, bk, bq]
-  with open(r'chessmodel\chessDataBetter.csv', 'a', newline='') as csvfile:
+  with open(r'chessDataBetter.csv', 'a', newline='') as csvfile:#change CSV with desired CSV file path
     fieldnames = ['board', 'whitecastling', 'blackcastling', 'turn', 'eval']
     writer = csv.DictWriter(csvfile, fieldnames=fieldnames)
     writer.writerow({'board': [wp, wr, wn, wb, wk, wq, bp, br, bn, bb, bk, bq],'whitecastling':[WKingside, WQueenside], 'blackcastling':[BKingside, BQueenside], 'turn':turn, 'eval': eval})
