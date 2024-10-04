@@ -80,7 +80,10 @@ for idx, row in data.iterrows():
   if eval[0] == '+':
     eval = eval[1:]
   elif eval[0] == '#':
-    eval = 10000
+    if turn == 1:
+      eval = 10000
+    else:
+      eval = -10000
   eval = int(eval)
   board = [wp, wr, wn, wb, wk, wq, bp, br, bn, bb, bk, bq]
   with open(r'chessDataBetter.csv', 'a', newline='') as csvfile:#change CSV with desired CSV file path
