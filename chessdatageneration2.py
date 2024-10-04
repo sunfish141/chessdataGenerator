@@ -66,7 +66,7 @@ for idx, row in data.iterrows():
     if end:
       if c == 'w':
         turn = 1
-      elif c == 'b' and turn = 2:
+      elif c == 'b' and turn == 2:
         turn = 0
       if c == 'K':
         WKingside = 1
